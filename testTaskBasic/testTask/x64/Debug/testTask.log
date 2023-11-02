@@ -1,0 +1,6 @@
+﻿  curvesClass.cpp
+  main.cpp
+  methods.cpp
+D:\VS Projects\testTask\testTask\methods.cpp(7,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Создание кода...
+  testTask.vcxproj -> D:\VS Projects\testTask\x64\Debug\testTask.exe
