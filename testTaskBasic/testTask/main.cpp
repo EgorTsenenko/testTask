@@ -6,6 +6,11 @@ int main() {
     
     std::cout << "Enter the number of curves to generate: ";
     std::cin >> numberOfCurves; 
+    while (numberOfCurves < 0)
+    {
+        std::cout << "Enter the CORRECT (> -1) number of curves to generate: ";
+        std::cin >> numberOfCurves;
+    }
     std::cout << "\n";
     addCurves(&curves, numberOfCurves);
 

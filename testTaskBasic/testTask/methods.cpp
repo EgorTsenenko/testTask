@@ -7,8 +7,8 @@ void addCurves(vector<Curve*> *curves, int numberOfCurves)
     srand(time(NULL));
     for (int i = 0; i < numberOfCurves; ++i) 
     {
-        double randomrad = rand();
-        double randomStep = rand();
+        double randomrad = rand() % 100 + 1;
+        double randomStep = rand() % 100 + 1;
         
         int variable = rand() % 100 + 1;
         if (variable < 30) {

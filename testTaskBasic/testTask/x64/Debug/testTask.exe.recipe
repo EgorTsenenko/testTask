@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>D:\VS Projects\testTask\x64\Debug\testTask.exe</FullPath>
+      <FullPath>D:\GitHubPr\testTask\testTaskBasic\x64\Debug\testTask.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
