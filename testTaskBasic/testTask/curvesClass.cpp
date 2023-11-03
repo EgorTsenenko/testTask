@@ -91,8 +91,8 @@ public:
     void Point(double t, double& x, double& y, double& z) const override 
     {
         x = rad * cos(t);
-        y = rad * sin(t);
-        z = step * t / (2 * PI);                                 
+        y = rad * sin(t);       
+        z = (step / (2 * PI) * t);
     }
 
     void Derivative(double t, double& dx, double& dy, double& dz) const override 

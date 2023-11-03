@@ -1,6 +1,7 @@
 #include "curvesClass.cpp"
 #include <ctime>
 #include <cstdlib>
+#include <omp.h>
 
 void addCurves(vector<Curve*> *curves, int numberOfCurves)
 {
@@ -66,12 +67,19 @@ void printCircles(vector<Circle*>* circles)
 double sumOfCircleRadii(vector<Circle*>* circles)
 {
     double radSum = 0.0;
-    for (Circle* &circle : (*circles)) 
+    #pragma omp parallel shared(circles) reduction(+: radSum)
     {
-        radSum += circle->circleRadius();
+        #pragma omp for
+        for (int i = 0; i<circles->size(); i++)
+        {
+            radSum += circles[0][i]->circleRadius();
+        }
     }
     return radSum;
+    
 }
+
+
 
 
 
